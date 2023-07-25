@@ -9,6 +9,8 @@ var sequenceCheckCounter=0;
 
 $(document).keypress(function() {
     if (!started) {
+    
+        setTimeout(function(){$(document.body).removeClass('game-over')},0)
       $("#level-title").text("Level " + level);
       setTimeout(nextSequence,200);
       started = true;
@@ -33,7 +35,7 @@ $('.btn').click(function () {
 
 
 function startOver() {
-
+    
     gamePattern=[];
     level=0;
     started=false;
@@ -64,8 +66,8 @@ function checkAnswer(counter){
     }else{
         playSound("wrong");
         $(document.body).addClass('game-over');
-        setTimeout(function(){$(document.body).removeClass('game-over')},200)
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+
+        $("#level-title").text("Game Over, Press Any Key to Restart")  ;
         if(level>highestLevel){
             highestLevel=level;
             $("#level-record").text("Your Highest Level : " + highestLevel);

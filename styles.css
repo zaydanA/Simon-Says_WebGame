@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: transparent;
 }
 
 #level-title {
@@ -34,7 +34,7 @@ body {
 }
 
 .game-over {
-  background-color: red;
+  background-color: rgb(109, 0, 0);
   opacity: 0.8;
 }
 
@@ -64,4 +64,42 @@ body {
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
+}
+
+body {
+
+  background-color:#011F3F;
+}
+svg {
+  z-index: -1; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+
+.links {
+    z-index: -1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+a {
+  
+  text-decoration: none;
+  color: black;
+  margin-left: 1em;
+}
+a:hover {
+  text-decoration: underline;
+}
+a img.icon {
+
+  display: inline-block;
+  height: 1em;
+  margin: 0 0 -0.1em 0.3em;
 }
