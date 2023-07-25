@@ -19,10 +19,4 @@ Welcome to the Simon Says Game Website! This website is a fun and interactive pl
 
 * Responsive Design: The website is designed to work flawlessly on desktop, tablet, and mobile devices. Play the game wherever and whenever you want!
 
-## Built With
 
-This project was built with the following technologies:
-
-* [![JQuery][JQuery.com]][JQuery-url]
-* [![html][html.com]][html-url]
-* [![css][css.com]][css-url]
