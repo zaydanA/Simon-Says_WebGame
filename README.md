@@ -1,9 +1,9 @@
 
-### Simon Says Web Game
+# Simon Says Web Game
 
 Welcome to the Simon Says Game Website! This website is a fun and interactive platform where you can test your memory with the classic Simon Says game. Simon Says is a popular game that challenges players to follow a series of commands given by Simon, the leader.
 
-### How to Play
+## How to Play
 
 * Start Game: To begin, follow the instruction on the homepage. The game will generate a sequence of colors and sounds that you need to remember and repeat.
 
@@ -15,11 +15,11 @@ Welcome to the Simon Says Game Website! This website is a fun and interactive pl
 
 * Mistakes: Be careful! If you make a mistake in repeating the sequence, the game will end, and you'll have to start over. Try to beat your high score and improve your memory skills.
 
-### Features
+## Features
 
 * Responsive Design: The website is designed to work flawlessly on desktop, tablet, and mobile devices. Play the game wherever and whenever you want!
 
-### Built With
+## Built With
 
 This project was built with the following technologies:
 
