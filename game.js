@@ -72,6 +72,8 @@ function checkAnswer(counter){
             highestLevel=level;
             $("#level-record").text("Your Highest Level : " + highestLevel);
         }
+        setTimeout(function(){$(document.body).removeClass('game-over')
+        $("#level-title").text("Press Any Key to Start")  ;},5000)
         startOver();
     }
 }
