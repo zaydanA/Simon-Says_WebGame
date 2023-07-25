@@ -1,5 +1,5 @@
 
-var buttonColours=["red", "blue", "green", "yellow"];
+var buttonColours=["red", "blue", "green", "yellow", "purple", "white"];
 var gamePattern=[];
 var userPattern=[];
 var highestLevel=0;
@@ -81,7 +81,7 @@ function nextSequence(){
 
     $("#level-title").text("Level " + level);
 
-    var randomNumber=Math.floor(Math.random() * 4);
+    var randomNumber=Math.floor(Math.random() * 6);
     var randomChosenColour=buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
 
