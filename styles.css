@@ -6,14 +6,14 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin:  3%;
   color: #FEF2BF;
 }
 
 #level-record {
   font-family: 'Press Start 2P', cursive;
   font-size: 2rem;
-  margin:  5%;
+  margin:  3%;
   color: #FEF2BF;
 }
 
@@ -106,8 +106,6 @@ a img.icon {
 
 .butn-1 {
   display: inline-block;
-  align-items: center;
-  justify-content: center;
   font-family: Hack, monospace;
   background: #FEF2BF;
   color: #000000;
@@ -121,7 +119,7 @@ a img.icon {
   min-width: 100px;
   position: relative;
   margin-bottom: 40px;
-  margin-top: 0px;
+  /* margin-top: -200px; */
 }
 
 .butn-1::after {
