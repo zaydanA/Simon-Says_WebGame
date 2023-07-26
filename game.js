@@ -1,5 +1,5 @@
 
-var buttonColours=["red", "blue", "green", "yellow", "purple", "white"];
+var buttonColours=['red', 'blue', 'green', 'yellow', 'purple', 'white'];
 var gamePattern=[];
 var userPattern=[];
 var highestLevel=0;
@@ -11,7 +11,7 @@ $(document).keypress(function() {
     if (!started) {
     
       $(document.body).removeClass('game-over')
-      $("#level-title").text("Level " + level);
+      $('#level-title').text('Level ' + level);
       setTimeout(nextSequence,200);
       started = true;
     }  
@@ -21,18 +21,18 @@ $('.butn-1').click(function() {
     if (!started) {
     
       $(document.body).removeClass('game-over')
-      $("#level-title").text("Level " + level);
+      $('#level-title').text('Level ' + level);
       setTimeout(nextSequence,200);
       started = true;
       $('.butn-1').text('Stop');
     } else{
-        playSound("wrong");
+        playSound('wrong');
         $(document.body).addClass('game-over');  
 
-        $("#level-title").text("Game Over, Press Any Key to Restart")  ;
+        $('#level-title').text('Game Over, Press Any Key to Restart')  ;
         if(level>highestLevel){
             highestLevel=level;
-            $("#level-record").text("Your Highest Level : " + highestLevel);
+            $('#level-record').text('Your Highest Level : ' + highestLevel);
         }
         $('.butn-1').text('Start');
         startOver();
@@ -67,9 +67,9 @@ function startOver() {
 }
 
 function animatePress(currentColor) {
-    $("#" + currentColor).addClass("pressed");
+    $('#' + currentColor).addClass('pressed');
     setTimeout(function () {
-      $("#" + currentColor).removeClass("pressed");
+      $('#' + currentColor).removeClass('pressed');
     }, 100);
   }
 
@@ -87,13 +87,12 @@ function checkAnswer(counter){
             }, 1000);
         }
     }else{
-        playSound("wrong");
+        playSound('wrong');
         $(document.body).addClass('game-over');
-
-        $("#level-title").text("Game Over, Press Any Key to Restart")  ;
+        $('#level-title').text('Game Over, Press Any Key to Restart')  ;
         if(level>highestLevel){
             highestLevel=level;
-            $("#level-record").text("Your Highest Level : " + highestLevel);
+            $('#level-record').text('Your Highest Level : ' + highestLevel);
         }
         $('.butn-1').text('Start');
         startOver();
@@ -105,13 +104,13 @@ function nextSequence(){
     userPattern=[];
     level++;
 
-    $("#level-title").text("Level " + level);
+    $('#level-title').text('Level ' + level);
 
     var randomNumber=Math.floor(Math.random() * 6);
     var randomChosenColour=buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
 
-    $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
+    $('#' + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColour);
 
 
