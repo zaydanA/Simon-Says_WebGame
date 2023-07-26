@@ -95,7 +95,7 @@ function checkAnswer(counter){
             highestLevel=level;
             $("#level-record").text("Your Highest Level : " + highestLevel);
         }
-
+        $('.butn-1').text('Start');
         startOver();
     }
 }
