@@ -10,11 +10,34 @@ var sequenceCheckCounter=0;
 $(document).keypress(function() {
     if (!started) {
     
-        setTimeout(function(){$(document.body).removeClass('game-over')},0)
+      $(document.body).removeClass('game-over')
       $("#level-title").text("Level " + level);
       setTimeout(nextSequence,200);
       started = true;
-    } 
+    }  
+});
+
+$('.butn-1').click(function() {
+    if (!started) {
+    
+      $(document.body).removeClass('game-over')
+      $("#level-title").text("Level " + level);
+      setTimeout(nextSequence,200);
+      started = true;
+      $('.butn-1').text('Stop');
+    } else{
+        playSound("wrong");
+        $(document.body).addClass('game-over');  
+
+        $("#level-title").text("Game Over, Press Any Key to Restart")  ;
+        if(level>highestLevel){
+            highestLevel=level;
+            $("#level-record").text("Your Highest Level : " + highestLevel);
+        }
+        $('.butn-1').text('Start');
+        startOver();
+        
+    }
 });
 
 
@@ -35,7 +58,7 @@ $('.btn').click(function () {
 
 
 function startOver() {
-    
+
     gamePattern=[];
     level=0;
     started=false;
@@ -72,8 +95,7 @@ function checkAnswer(counter){
             highestLevel=level;
             $("#level-record").text("Your Highest Level : " + highestLevel);
         }
-        setTimeout(function(){$(document.body).removeClass('game-over')
-        $("#level-title").text("Press Any Key to Start")  ;},5000)
+
         startOver();
     }
 }
